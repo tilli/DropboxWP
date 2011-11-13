@@ -22,7 +22,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="0" Margin="0,0,0,0">
-            <phone:WebBrowser HorizontalAlignment="Left" Name="webBrowser1" VerticalAlignment="Top" Height="768" Width="480" LoadCompleted="webBrowser1_LoadCompleted" Navigated="webBrowser1_Navigated"/>
+            <phone:WebBrowser HorizontalAlignment="Left" Name="webBrowser1" VerticalAlignment="Top" Height="768" Width="480" LoadCompleted="webBrowser1_LoadCompleted"/>
         </Grid>
     </Grid>
  

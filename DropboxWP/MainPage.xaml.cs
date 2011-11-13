@@ -9,6 +9,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
+using System.Diagnostics;
+using System.IO;
 using Microsoft.Phone.Controls;
 
 namespace DropboxWP
@@ -25,6 +28,19 @@ namespace DropboxWP
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                Debug.WriteLine("Navigated to main page, token: " + e.Uri.ToString());
+                NavigationService.RemoveBackEntry();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
@@ -32,6 +48,24 @@ namespace DropboxWP
             {
                 App.ViewModel.LoadData();
             }
+
+            //string baseUrl = "https://api.dropbox.com/1/account/info";
+            //HttpWebRequest request = WebRequest.CreateHttp(baseUrl);
+            //request.BeginGetResponse(r =>
+            //{
+            //    HttpWebRequest httpRequest = (HttpWebRequest)r.AsyncState;
+            //    try
+            //    {
+            //        Debug.WriteLine(request.Headers.ToString());
+            //        HttpWebResponse httpResponse = httpRequest.EndGetResponse(r) as HttpWebResponse;
+            //        StreamReader reader = new StreamReader(httpResponse.GetResponseStream());
+            //        Debug.WriteLine(reader.ReadToEnd());
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Debug.WriteLine(ex.Message);
+            //    }
+            //}, request);
         }
     }
 }
