@@ -119,8 +119,8 @@ namespace DropboxWP
         private void LoadAccessToken()
         {
             string baseUrl = "https://api.dropbox.com/1/oauth/access_token";
-            string consumerKey = "gnwbbe7wcxw9lr9";
-            string consumerSecret = "ifhc1upnmb7s1uk";
+            string consumerKey = "<enter-key>";
+            string consumerSecret = "<enter-secret>";
             long timestamp = GetEpochTime();
             int nonce = new Random().Next(10000000);
 
