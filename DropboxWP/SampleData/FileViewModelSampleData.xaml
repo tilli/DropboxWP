@@ -1,0 +1,25 @@
+<local:FileViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DropboxWP"
+    SampleProperty="FooBar">
+    
+    <local:FileViewModel.LeftItems>
+        <local:FileModelItem FileName="Foo.txt"/>
+        <local:FileModelItem FileName="Foo.txt"/>
+        <local:FileModelItem FileName="Foo.txt"/>
+        <local:FileModelItem FileName="Foo.txt"/>
+        <local:FileModelItem FileName="Foo.txt"/>
+        <local:FileModelItem FileName="Foo.txt"/>
+    </local:FileViewModel.LeftItems>
+
+    <local:FileViewModel.RightItems>
+        <local:FileModelItem FileName="Bar.txt"/>
+        <local:FileModelItem FileName="Bar.txt"/>
+        <local:FileModelItem FileName="Bar.txt"/>
+        <local:FileModelItem FileName="Bar.txt"/>
+        <local:FileModelItem FileName="Bar.txt"/>
+        <local:FileModelItem FileName="Bar.txt"/>
+    </local:FileViewModel.RightItems>
+
+</local:FileViewModel>

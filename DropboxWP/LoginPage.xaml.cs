@@ -129,7 +129,7 @@ namespace DropboxWP
                             {
                                 accessToken = token;
                                 accessTokenSecret = secret;
-                                NavigationService.Navigate(new Uri("/MainPage.xaml?token=" + accessToken + "&secret=" + accessTokenSecret, UriKind.Relative));
+                                NavigationService.Navigate(new Uri("/FilesPage.xaml?token=" + accessToken + "&secret=" + accessTokenSecret, UriKind.Relative));
                             }
                             catch (Exception ex)
                             {
